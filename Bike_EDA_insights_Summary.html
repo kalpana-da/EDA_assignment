@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDA Summary - Bike Dataset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .container {
+            background-color: white;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1B5083;
+        }
+        .qa-section {
+            margin-bottom: 20px;
+        }
+        .qa-section h3 {
+            color: #1B5083;
+        }
+        .qa-section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .qa-section ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .qa-section ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Exploratory Data Analysis (EDA) <br/> Summary - Bike Dataset</h1>
+
+    <div class="qa-section">
+        <h3>1. What is the range of selling prices in the dataset?</h3>
+        <p>Ans: The selling prices in the dataset range from ₹5,000 to ₹760,000, indicating a wide variety of bike conditions and models.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>2. What is the median selling price for bikes in the dataset?</h3>
+        <p>Ans: The median selling price is around ₹45,000, showing that half of the bikes are priced below this point — a useful benchmark for buyers.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>3. What is the most common seller type?</h3>
+        <p>Ans: the most common seller type are Individual & Dealers</p>
+            
+    </div>
+
+    <div class="qa-section">
+        <h3>4. How many bikes have driven more than 50,000 kilometers?</h3>
+        <p>Ans: 168 bikes have been driven for more than 50,000 kilometers, showing more wear and potentially lower resale value.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>5. What is the average km_driven value for each ownership type?</h3>
+        <p>Ans: First owners have lower kilometers driven, and bikes with multiple owners tend to have higher mileage.</p>
+        <ul>
+            <li>1st owner: 32,733 km</li>
+            <li>2nd owner: 39,289 km</li>
+            <li>3rd owner: 33,292 km</li>
+            <li>4th owner: 311,500 km</li>
+        </ul>
+    </div>
+
+    <div class="qa-section">
+        <h3>6. What proportion of bikes are from the year 2015 or older?</h3>
+        <p>Ans: 56.59% of the bikes in the dataset are from 2015 or earlier.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>7. What is the trend of missing values across the dataset?</h3>
+        <p>Ans: There are a few missing values, mainly in the `ex_showroom_price` column (433 missing entries). These were filled with the column’s median value.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>8. What is the highest ex_showroom_price recorded, and for which bike?</h3>
+        <p>Ans: The highest ex-showroom price recorded is ₹1,278,000, and it belongs to the **Harley-Davidson Street Bob**.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>9. What is the total number of bikes listed by each seller type?</h3>
+        <p>Ans:</p>
+        <ul>
+            <li>Individual: 1049</li>
+            <li>Dealer: 6</li>
+        </ul>
+    </div>
+
+    <div class="qa-section">
+        <h3>10. What is the relationship between selling_price and km_driven for first-owner bikes?</h3>
+        <p>Ans: As kilometers increase, the selling price tends to decrease, with buyers typically preferring low-km first-owner bikes.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>11. Identify and remove outliers in the km_driven column using the IQR method.</h3>
+        <p>Ans: Outliers in `km_driven` were removed using the IQR method to ensure the analysis remains robust.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>12. Perform a bivariate analysis to visualize the relationship between year and selling_price.</h3>
+        <p>Ans: Newer bikes tend to fetch higher selling prices, confirming depreciation trends over time.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>13. What is the average depreciation in selling price based on the bike's age (current year – manufacturing year)?</h3>
+        <p>Ans: As bike age increases, the selling price decreases, confirming a clear depreciation pattern.</p>
+    </div>
+
+    <div class="qa-section">
+        <h3>14. Which bike names are priced significantly above the average price for their manufacturing year?</h3>
+        
+        <ul style="list-style-type: disc;">
+            <p>Ans:</p>
+            <li>Royal Enfield Classic 350 (2019)</li>
+            <li>Yamaha YZF R3 (2019)</li>
+            <li>Older models like Royal Enfield Bullet 350 (2008)** show depreciation.</li>
+            <li>Newer models like Royal Enfield Classic Gunmetal Grey (2018) retain higher prices.</li>
+            <li>Yamaha Fazer FI V 2.0 (2015)** maintains good value.</li>
+            <li>Newer bikes generally have higher prices due to demand and features.</li>
+        </ul>
+    </div>
+
+    <div class="qa-section">
+        <h3>15. Develop a correlation matrix for numeric columns and visualize it using a heatmap.</h3>
+        <p>Ans: The correlation matrix reveals a strong positive correlation between `selling_price` and `ex_showroom_price`, and a negative correlation with `bike_age`.</p>
+    </div>
+</div>
+
+</body>
+</html>

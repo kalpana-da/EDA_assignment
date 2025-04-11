@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploratory Data Analysis (EDA) Summary</title>
+</head>
+<body>
+    <h1>Exploratory Data Analysis (EDA) Summary</h1>
+    <h2>Q1: Read the dataframe, check null values if present then do the needful, check duplicate rows, if present then do the needful?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>27 duplicated values were found.</li>
+        <li>These duplicated values were removed.</li>
+    </ul>
+
+    <h2>Q2: What is the distribution of popularity among the tracks in the dataset? Visualize it using a histogram?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>Most tracks have a popularity score between 70-80, with a peak in this range.</li>
+        <li>A few tracks have lower popularity (30-50).</li>
+        <li>A small number of tracks have very high popularity (90-100).</li>
+    </ul>
+
+    <h2>Q3: Is there any relationship between the popularity and the duration of tracks? Explore this using a scatter plot?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>No clear relationship between popularity and duration.</li>
+        <li>Both short and long tracks can have high popularity.</li>
+    </ul>
+
+    <h2>Q4: Which artist has the highest number of tracks in the dataset? Display the count of tracks for each artist using a count plot?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>Most tracks indicate high popularity or extensive catalogs.</li>
+        <li>Artists with more tracks have higher engagement potential for marketing.</li>
+        <li>Artists with fewer tracks may offer growth opportunities.</li>
+    </ul>
+
+    <h2>Q5: What are the top 5 least popular tracks in the dataset? Provide the artist name and track name for each?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>The top 5 least popular tracks are identified based on their low popularity scores.</li>
+        <li>These tracks may need better promotion or audience targeting to increase their visibility and engagement.</li>
+    </ul>
+
+    <h2>Q6: Among the top 5 most popular artists, which artist has the highest popularity on average? Calculate and display the average popularity for each artist?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>The artist with the highest average popularity will be the one that consistently ranks higher in popularity across their tracks.</li>
+        <li>This can help identify artists with strong fan engagement or those more consistently popular.</li>
+    </ul>
+
+    <h2>Q7: For the top 5 most popular artists, what are their most popular tracks? List the track name for each artist?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>Artists like David Guetta, Trueno, cassö, and Travis Scott dominate with more popular tracks, indicating strong fan engagement.</li>
+    </ul>
+
+    <h2>Q8: Visualize relationships between multiple numerical variables simultaneously using a pair plot</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li><strong>Correlations:</strong> Pair plots help identify linear or non-linear relationships between variables.</li>
+        <li><strong>Clusters:</strong> Look for clusters or groupings that can give insights into track trends.</li>
+        <li><strong>Outliers:</strong> Any noticeable outliers may indicate anomalies or tracks with unique features.</li>
+    </ul>
+
+    <h2>Q9: Does the duration of tracks vary significantly across different artists? Explore this visually using a box plot or violin plot?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>The <strong>box plot</strong> shows the median, quartiles, and outliers in track durations per artist.</li>
+        <li>Artists with longer boxes have more variation in track lengths.</li>
+        <li>Artists with shorter boxes tend to produce tracks of consistent duration.</li>
+    </ul>
+
+    <h2>Q10: How does the distribution of track popularity vary for different artists? Visualize this using a swarm plot or a violin plot?</h2>
+    <p><strong>Insights:</strong></p>
+    <ul>
+        <li>The <strong>density of points</strong> shows where most of an artist's tracks lie in terms of popularity.</li>
+        <li>Artists with a wide spread in their points might have tracks that vary greatly in popularity.</li>
+        <li>Artists with a tighter cluster of points may have more consistent popularity across tracks.</li>
+    </ul>
+
+</body>
+</html>
